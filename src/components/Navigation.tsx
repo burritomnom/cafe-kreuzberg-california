@@ -16,6 +16,8 @@ const Navigation = () => {
     { name: "Contact", path: "/contact" },
   ];
 
+  const doordashUrl = "https://www.doordash.com/store/kreuzberg-california-san-luis-obispo-1367223";
+
   const isActive = (path: string) => location.pathname === path;
 
   return (
@@ -44,8 +46,8 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
-            <Button variant="default" size="sm" className="ml-4">
-              Order Online
+            <Button asChild variant="default" size="sm" className="ml-4">
+              <Link to="/order">Order Online</Link>
             </Button>
           </div>
 
@@ -75,8 +77,8 @@ const Navigation = () => {
                   {item.name}
                 </Link>
               ))}
-              <Button variant="default" size="sm" className="mx-4">
-                Order Online
+              <Button asChild variant="default" size="sm" className="mx-4">
+                <Link to="/order">Order Online</Link>
               </Button>
             </div>
           </div>
